@@ -3,14 +3,23 @@
 2. Le Petit Bot c'est un matériel facile à assembler par des jeunes à partir de 8 ans
 3. Le Petit Bot ne coûte pas plus de 15 euros.
 
+## Matériel
+Le petit bot se compose :
+* 2 servomoteurs à rotation continue
+* 1 Wemos D1 Mini
+* des fils dupont
+* unsystème d'alimnetation électrique (batterie 5V, support pour 4 piles AA - LR6,...).
+* un interrupteur
+
+En suite à vous de bricoler un plateforme, des roues, etc.
+En carton, bouchon de bouteille, etc...
 
 ## Installation
-
-TODO: Describe the installation process
+L'installation de base consiste à changer le programme sur un wemos D1 mini avec l'IDE Arduino.
 
 ## Usage
-
-TODO: Write usage instructions
+Le programme donne la capacité au petit bot d'être piloté depuis une page web.
+il peut ainsi être piloté par le logiciel SNAP! de l'Université de Californie à Berkeley (http://snap.berkeley.edu/).
 
 ## Contributing
 
