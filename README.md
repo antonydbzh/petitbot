@@ -17,6 +17,9 @@ En carton, bouchon de bouteille, etc...
 
 ## Installation
 L'installation de base consiste à changer le programme sur un wemos D1 mini avec l'IDE Arduino.
+Puis de monter un robot à deux roues.
+Puis, à la mise sus tension vous pouvez le controler via une page web à l'URL http://192.168.4.1
+![QRCode de l'URL ](https://github.com/antonydbzh/petitbot/blob/master/images/urlpetitbot.png)
 
 ## Usage
 Le programme donne la capacité au petit bot d'être piloté depuis une page web.
