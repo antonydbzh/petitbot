@@ -2,6 +2,7 @@
 1. Le Petit Bot c'est un robot, un programme, des logiciels pour commander Petit Bot et un programme pédagogique.
 2. Le Petit Bot c'est un matériel facile à assembler par des jeunes à partir de 8 ans
 3. Le Petit Bot ne coûte pas plus de 15 euros.
+4. Un tutoriel détaillé est disponible sur [Wikidébrouillard](http://wikidebrouillard.org/index.php?title=Petit_Bot_un_robot_controlable_en_Wifi)
 
 ## Matériel
 Le petit bot se compose :
@@ -19,7 +20,7 @@ L'installation de base consiste à changer le programme sur un wemos D1 mini ave
 
 ## Usage
 Le programme donne la capacité au petit bot d'être piloté depuis une page web.
-il peut ainsi être piloté par le logiciel SNAP! de l'Université de Californie à Berkeley (http://snap.berkeley.edu/).
+il peut ainsi être piloté par [le logiciel SNAP! de l'Université de Californie à Berkeley](http://snap.berkeley.edu/).
 
 ## Contributing
 
