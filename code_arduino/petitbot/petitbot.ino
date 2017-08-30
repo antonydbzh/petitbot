@@ -21,8 +21,8 @@ const char *nomDuReseau = "petitbot";     // Nom du réseau wifi du petit bot
 const char *motDePasse = "";    // Mot de passe du réseau wifi du petit bot
 // ATTENTION - le mot de passe doit faire soit 0 caractères soit 8 ou plus sinon
 // La configuration de votre réseau wifi ne se fera pas (ni mot de passe, ni nom de réseau !).
-//création du serveur
-ESP8266WebServer server(80);               // Création de l'objet serveur
+//création du monServeur
+ESP8266WebServer monServeur(80);               // Création de l'objet monServeur
 
 //Gestion des servomoteurs
 #include <Servo.h>   //appel de la bibliothèque qui gère les servomoteurs
@@ -48,42 +48,42 @@ void setup(){
 
 void loop(){
     val = -1;
-    server.handleClient();
+    monServeur.handleClient();
 }
 
 ///////////////////////GESTION DES INSTRUCTIONS///////////////////////////
-void serveur() {
-  server.on("/avance", HTTP_GET, []() {
+void GestionDesClics() {
+  monServeur.on("/avance", HTTP_GET, []() {
   val = 1;
   Serial.println("avance");    
   redactionPageWeb();
   });
 
-  server.on("/recule", HTTP_GET, []() {
+  monServeur.on("/recule", HTTP_GET, []() {
   val = 2;
   Serial.println("recule");
   redactionPageWeb();
   });
 
-  server.on("/droite", HTTP_GET, []() {
+  monServeur.on("/droite", HTTP_GET, []() {
   val = 4;
   Serial.println("droite");
   redactionPageWeb();
   });
   
-  server.on("/gauche", HTTP_GET, []() {
+  monServeur.on("/gauche", HTTP_GET, []() {
   val = 3;
   Serial.println("gauche");
   redactionPageWeb();
   });
 
-  server.on("/stop", HTTP_GET, []() {
+  monServeur.on("/stop", HTTP_GET, []() {
   val = 0;
   Serial.println("stop");
   redactionPageWeb();
   });
   
-  server.on("/", HTTP_GET, []() {
+  monServeur.on("/", HTTP_GET, []() {
   val = -1;
   redactionPageWeb();
   });
@@ -115,7 +115,7 @@ void redactionPageWeb(){
   pageWeb += "</html>\n"; //Fin de la page Web
 
   // On envoie la page web
-  server.send(200, "text/html", pageWeb);
+  monServeur.send(200, "text/html", pageWeb);
   delay(1);
 }
 
@@ -150,6 +150,7 @@ String instruction(int valeur){ //Cette fonction traite les instructions qui son
     droite = 0;
     gauche = 0;
     break;
+    // que faire du cas ou val = -1 ? marquer ici ce qui doit être fait.
   }
   servogauche.attach(D1);     // Broche D1
   servodroit.attach(D2);      // Broche D2
@@ -166,9 +167,8 @@ void configDuWifi(){  // Fonction de configuratio du Wifi
   IPAddress monIP = WiFi.softAPIP();       // on récupère l'adresse IP du petit Bot
   Serial.print("Adresse IP de ce Point d'Accès : ");
   Serial.println(monIP);                   // on l'écrit sur le moniteur série
-  serveur();
-  server.begin();                          //Démarrage du serveur
+  GestionDesClics();
+  monServeur.begin();                          //Démarrage du monServeur
   Serial.println("Serveur HTTP démarré");
-  return;                                  // on retourne à l'endroit ou la fonction a été appellée.
+  return;                                  // on retourne à l'endroit ou la fonction a été appelée.
 }
-
