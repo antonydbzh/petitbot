@@ -2,6 +2,7 @@
 1. Le Petit Bot c'est un robot, un programme, des logiciels pour commander Petit Bot et un programme pédagogique.
 2. Le Petit Bot c'est un matériel facile à assembler par des jeunes à partir de 8 ans
 3. Le Petit Bot ne coûte pas plus de 15 euros.
+4. Un tutoriel détaillé est disponible sur Wikidébrouillard : http://wikidebrouillard.org/index.php?title=Petit_Bot_un_robot_controlable_en_Wifi
 
 ## Matériel
 Le petit bot se compose :
