@@ -4,8 +4,34 @@
 // Un programme pédagogique des petits débrouillards ?=+ pour gérer le robot "Petit Bot" 
 // Voir sur http://wikidebrouillard.org/index.php?title=Petit_Bot_un_robot_controlable_en_Wifi
 // Ce programme est inspire de : http://www.esp8266.com/viewtopic.php?f=29&t=6419#sthash.gd1tJhwU.dpuf
-// Sous licence CC-By-Sa
-// Par des gens bien
+// Sous licence CC-By-Sa - Les petits débrouillards.
+/////////////////////////////////////////////////////////////
+//                        BROCHAGE                         //
+//                     _____________                       //
+//                    /   D1 mini   \                      //
+//                 - |RST          TX| -                   //
+//                 - |A0           RX| -                   //
+//                 - |D0           D1| servogauche         //
+//                 - |D5           D2| servodroit          //
+//                 - |D6           D3| -                   //
+//                 - |D7           D4| LED_BUILTIN         //
+//                 - |D8          GND| -                   //
+//                 - |3V3__________5V| -                   //
+//                                                         //
+/////////////////////////////////////////////////////////////
+/*
+   ???????
+ ???    ????
+ ???   ????
+     ????
+     ????  =========     ++++
+     ????  =========     ++++
+                    ++++++++++++++
+                    ++++++++++++++
+     ????  =========     ++++
+     ????  =========     ++++
+CC-By-Sa Les petits débrouillards 2016
+*/
 
 // on appelle la bibliothèque qui gère le Wemos D1 mini
 #include <ESP8266WiFi.h> 
@@ -168,7 +194,7 @@ void configDuWifi(){  // Fonction de configuratio du Wifi
   Serial.print("Adresse IP de ce Point d'Accès : ");
   Serial.println(monIP);                   // on l'écrit sur le moniteur série
   GestionDesClics();
-  monServeur.begin();                          //Démarrage du monServeur
+  monServeur.begin();                      //Démarrage du monServeur
   Serial.println("Serveur HTTP démarré");
   return;                                  // on retourne à l'endroit ou la fonction a été appelée.
 }

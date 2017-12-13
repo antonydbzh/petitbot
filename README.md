@@ -9,7 +9,7 @@ Le petit bot se compose :
 * 2 servomoteurs à rotation continue
 * 1 Wemos D1 Mini
 * des fils dupont
-* unsystème d'alimnetation électrique (batterie 5V, support pour 4 piles AA - LR6,...).
+* un système d'alimentation électrique (batterie 5V, support pour 4 piles AA - LR6,...).
 * un interrupteur
 
 En suite à vous de bricoler un plateforme, des roues, etc.
@@ -39,8 +39,11 @@ TODO: Write history
 
 ## Credits
 
-TODO: Write credits
+Julien Rat - Les petits débrouillards
+Antony Auffret - Les petits débrouillards
+Et bien d'autres avant et après, un peu partout.
+Ce programme est inspire de : http://www.esp8266.com/viewtopic.php?f=29&t=6419#sthash.gd1tJhwU.dpuf
 
 ## License
 
-TODO: Write license
+CC-By-Sa
