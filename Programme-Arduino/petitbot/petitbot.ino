@@ -178,8 +178,8 @@ String instruction(int valeur){ //Cette fonction traite les instructions qui son
     break;
     // que faire du cas ou val = -1 ? marquer ici ce qui doit être fait.
   }
-  servogauche.attach(D1);     // Broche D1
-  servodroit.attach(D2);      // Broche D2
+  servogauche.attach(5);     // Broche D1
+  servodroit.attach(4);      // Broche D2
   servogauche.write(gauche); 
   servodroit.write(droite);
   return completePage;        // on renvoie la chaine de caractère pour compléter la page web
